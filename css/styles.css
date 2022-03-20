@@ -199,7 +199,7 @@ img.page-header__item {
   margin: 0 auto;
 }
 
-.work-container h1 {
+.work-container h1, p {
   text-align: center;
 }
 
