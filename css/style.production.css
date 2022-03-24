@@ -11,13 +11,11 @@
 }
 
 body {
-	font-family: 'Noto Sans', sans-serif;
-	font-weight: 400;
-	/* Sets the font size to 16px */
-	font-size: 16px;
-	/* Sets the line-height to 1.5 */
-	line-height: 1.5;
-	background: #fff9ee;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;/* Sets the font size to 16px */
+  font-size: 16px;/* Sets the line-height to 1.5 */
+  line-height: 1.5;
+  background: #fff9ee;
 }
 
 h1 {
@@ -44,7 +42,8 @@ a:visited {
   color: #000bdb;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
 }
@@ -57,16 +56,13 @@ a:active {
 .button {
   /* overwrites browser defaults and resets the border */
   border: none;
-  display: inline-block;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* styles the button */
+  display: inline-block;/* takes the font from the outer container */
+  font-family: inherit;/* styles the button */
   background-color: #357b70;
   color: white;
   text-decoration: none;
   padding: 10px;
-  border-radius: 3px;
-  /* width of the border, type, color */
+  border-radius: 3px;/* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.3s opacity, 0.5 background-color;
   transition: 0.3s opacity, 0.5 background-color;
@@ -75,16 +71,13 @@ a:active {
 button {
   /* overwrites browser defaults and resets the border */
   border: none;
-  display: inline-block;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* styles the button */
+  display: inline-block;/* takes the font from the outer container */
+  font-family: inherit;/* styles the button */
   background-color: #357b70;
   color: white;
   text-decoration: none;
   padding: 10px;
-  border-radius: 3px;
-  /* width of the border, type, color */
+  border-radius: 3px;/* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.3s opacity, 0.5 background-color;
   transition: 0.3s opacity, 0.5 background-color;
@@ -96,8 +89,7 @@ button:focus,
 .button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
+  opacity: 0.8;/* reduces the opacity of the button to 80% */
 }
 
 .button2 {
@@ -143,8 +135,6 @@ img.page-header__item {
           flex-grow: 1;
   text-align: right;
 }
-
-
 
 .navigation-list {
   list-style-type: none;
@@ -208,7 +198,6 @@ img.page-header__item {
   margin: auto;
 }
 
-
 .page-footer {
   clear: both;
   display: -webkit-box;
@@ -227,20 +216,20 @@ img.page-header__item {
   margin-bottom: 50px;
 }
 
-.work-container h1, p {
+.work-container h1,
+p {
   text-align: center;
 }
 
 .project-image {
-   max-width: 100%;
+  max-width: 100%;
 }
 
 /* start grid fallback */
 .grid__item {
- display: inline-block;
- width: 33%;
-}
-/* end grid fallback */
+  display: inline-block;
+  width: 33%;
+} /* end grid fallback */
 
 @supports (display: grid) {
   .grid {
@@ -263,16 +252,14 @@ img.page-header__item {
   }
 }
 
-
-
 @media all and (max-width: 500px) {
   .grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-   }
+  }
 }
 
-@media all and (min-width: 500px) and (max-width: 750px){
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
@@ -306,43 +293,45 @@ img.page-header__item {
   .grid {
     grid-gap: 10px;
   }
+
   h1 {
     font-size: 22px;
   }
+
   h3 {
     font-size: 16px;
   }
 }
 
-
-
 @-webkit-keyframes color-change {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
 }
-
-
 
 @keyframes color-change {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
 }
 
- .sun {
+.sun {
   -webkit-animation: 4s color-change infinite alternate linear;
           animation: 4s color-change infinite alternate linear;
 }
@@ -352,6 +341,7 @@ img.page-header__item {
     -webkit-transform: translate(0, 50px);
             transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
             transform: translate(200px, 50px);
@@ -363,6 +353,7 @@ img.page-header__item {
     -webkit-transform: translate(0, 50px);
             transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
             transform: translate(200px, 50px);
@@ -377,30 +368,32 @@ img.page-header__item {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  animation-direction: alternate;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
@@ -420,7 +413,8 @@ img.page-header__item {
   text-align: center;
 }
 
-form input, textarea {
+form input,
+textarea {
   padding: 5px;
   border-radius: 5px;
   width: 240px;
@@ -433,7 +427,6 @@ form input, textarea {
   width: 150px;
   background-color: #9ec0e6;
 }
-
 
 #submit-button:hover {
   cursor: pointer;
