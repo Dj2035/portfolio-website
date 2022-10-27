@@ -1,5 +1,6 @@
 :root {
-  --background-color: #fff9ee;
+  --background-color: #f4f4ea;
+  --navbar-background: #2b3636;
   --link-color: #2129a3;
   --link-color-visited: #000bdb;
   --link-color-active: #660169;
@@ -18,12 +19,16 @@
 
 * {
   box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
   font-family: 'Noto Sans', sans-serif;
-  font-weight: var(--default-font-weight);/* Sets the font size to 16px */
-  font-size: var(--default-font-size);/* Sets the line-height to 1.5 */
+  font-weight: var(--default-font-weight);
+  /* Sets the font size to 16px */
+  font-size: var(--default-font-size);
+  /* Sets the line-height to 1.5 */
   line-height: 1.5;
   background: var(--background-color);
 }
@@ -67,13 +72,16 @@ a:active {
 button {
   /* overwrites browser defaults and resets the border */
   border: none;
-  display: inline-block;/* takes the font from the outer container */
-  font-family: inherit;/* styles the button */
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
   background-color: var(--default-button-background-color);
   color: white;
   text-decoration: none;
   padding: 10px;
-  border-radius: 3px;/* width of the border, type, color */
+  border-radius: 3px;
+  /* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.3s opacity, 0.5 background-color;
 }
@@ -84,7 +92,8 @@ button:focus,
 .button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
-  opacity: 0.8;/* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+  /* reduces the opacity of the button to 80% */
 }
 
 .button2 {
@@ -100,10 +109,28 @@ button:focus,
   color: var(--secondary-button-text-color);
 }
 
+/* Nav bar */
+
+/*
+.navbar {
+  background-color: var(--brand_primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+*/
+
 .page-header {
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   margin-bottom: 50px;
 }
@@ -112,6 +139,7 @@ img.page-header__item {
   width: 20%;
   height: auto;
   align-self: start;
+  cursor: pointer;
 }
 
 .page-header__item {
@@ -132,10 +160,16 @@ img.page-header__item {
   margin-left: 15px;
 }
 
+.navigation-list li a {
+  transition: all 0.3s ease 0s;
+}
+
 .navigation-list__item--active {
   text-decoration: none;
   font-weight: bolder;
 }
+
+/* Index page */
 
 .profile-wrapper {
   display: grid;
@@ -161,6 +195,8 @@ img.page-header__item {
   border-radius: 50%;
 }
 
+/* About me page */
+
 .aboutme-wrapper {
   max-width: 700px;
   margin: 0 auto;
@@ -180,15 +216,10 @@ img.page-header__item {
   margin: auto;
 }
 
-.page-footer {
-  clear: both;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
+/* Work page */
 
 .work-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   margin-bottom: 50px;
 }
@@ -200,13 +231,24 @@ p {
 
 .project-image {
   max-width: 100%;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 /* start grid fallback */
 .grid__item {
   display: inline-block;
   width: 33%;
-} /* end grid fallback */
+}
+
+/* end grid fallback */
 
 @supports (display: grid) {
   .grid {
@@ -231,6 +273,8 @@ p {
   .grid {
     grid-template-columns: 1fr;
   }
+
+
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
